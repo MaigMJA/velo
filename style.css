@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body, html{
+  /*width:100%;
+  height:100%;*/
+  min-width:960px;
+  min-height:546px;
+}
+
+#paysage{
+  width:960px;
+  height:546px;
+  background-image: url(./img/decor_velo.png);
+  position: absolute;
+  margin:auto;
+/*
+  animation-name:paysage;
+  */
+  -webkit-animation: animatedBackground 2s linear infinite;
+  -moz-animation: animatedBackground 2s linear infinite;
+  animation: animatedBackground 2s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 100% 0px; }
+
+  to {
+    background-position: 0px 0px; }
+}
+
+@-webkit-keyframes animatedBackground {
+  from {
+    background-position: 100% 0px; }
+
+  to {
+    background-position: 0px 0px; }
+}
+
+
+
+#cadre{
+    background-image: url(./img/cadre.png);
+    width:374px;
+    height:229px;
+    position:absolute;
+    bottom:65px;
+    left:84px;
+    z-index: 2;
+
+}
+
+#roue1, #roue2, #pedalier, #corps, #cuisse1, #cuisse2, #mollet1, #mollet2, #chaussure1, #chaussure2{
+  position:absolute;
+}
+
+/*animation des roues*/
+@-webkit-keyframes roue1
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes roue1
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes roue1
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+#roue1, #roue2{
+    -webkit-animation-name: roue1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: roue1;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: roue1;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+#roue1, #roue2{
+  background-image: url(./img/roue.png);
+  width:207px;
+  height:207px;
+  bottom:20px;
+  z-index: 1;
+  /*transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -webkit-transition-duration: 1s;
+  -webkit-transition-delay: now;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;*/
+}
+#roue1{
+  left:20px;
+}
+
+#roue2{
+  left:312px;
+}
+
+#pedalier{
+  background-image: url(./img/pedalier.png);
+  width:84px;
+  height:107px;
+  bottom:50px;
+  left:200px;
+  z-index: 3;
+}
+
+/*animation des roues*/
+@-webkit-keyframes pedalier
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes pedalier
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes pedalier
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+#pedalier{
+    -webkit-animation-name: roue1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: roue1;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: roue1;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+
+#corps{
+  background-image: url(./img/corps.png);
+  width:260px;
+  height:229px;
+  bottom:230px;
+  left:170px;
+  z-index: 2;
+}
+
+#cuisse1{
+  background-image: url(./img/cuisse.png);
+  width:172px;
+  height:57px;
+  z-index: 2;
+  bottom:285px;
+  left:165px;
+  z-index: 3;
+  transform-origin: left;
+
+  -webkit-animation: cuisse1 1s linear infinite;
+  -moz-animation: cuisse1 1s linear infinite;
+  animation: cuisse1 1s linear infinite;
+}
+
+
+@keyframes cuisse1 {
+  from {
+    transform: rotate(18deg);}
+
+  to {
+    transform: rotate(40deg);}
+}
+
+@-webkit-keyframes cuisse1 {
+  from {
+    transform: rotate(18deg);}
+
+  to {
+    transform: rotate(40deg); }
+}
+#cuisse2{
+  background-image: url(./img/cuisse.png);
+  width:172px;
+  height:57px;
+  z-index: 2;
+  bottom:285px;
+  left:165px;
+  z-index: 0;
+  transform-origin: left;
+
+  -webkit-animation: cuisse2 1s cuisse2 infinite;
+  -moz-animation: cuisse2 1s linear infinite;
+  animation: cuisse2 1s linear infinite;
+}
+
+
+@keyframes cuisse2 {
+  from {
+    transform: rotate(40deg);}
+
+  to {
+    transform: rotate(18deg);}
+}
+
+@-webkit-keyframes cuisse2 {
+  from {
+    transform: rotate(40deg);}
+
+  to {
+    transform: rotate(18deg); }
+}
+
+
+
+/*mollet droite */
+#mollet1{
+  background-image: url(./img/mollet.png);
+  width:37px;
+  height:150px;
+  height: 149px;
+  height: 150px;
+  bottom: -115px;
+  left: 136px;
+  z-index: 2;
+  transform-origin: left;
+
+-webkit-animation: mollet1 2s linear infinite;
+-moz-animation: mollet1 2s linear infinite;
+animation: mollet1 2s linear infinite;
+}
+
+
+/*mollet gauche */
+#mollet2{
+  background-image: url(./img/mollet.png);
+  width:37px;
+  height:150px;
+  height: 149px;
+  bottom: -115px;
+  left: 136px;
+  z-index: 2;
+  transform-origin: left;
+  -webkit-animation: mollet1 1s linear infinite;
+  -moz-animation: mollet1 1s linear infinite;
+  animation: mollet1 1s linear infinite;
+}
+/*pied gauche*/
+#chaussure1{
+  background-image: url(./img/chaussure.png);
+  width:69px;
+  height:38px;
+  /*bottom:90px;
+  left:195px;*/
+  bottom: -123px;
+  left: 130px;
+  z-index: 3;
+  transform-origin: left;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+/*pied droit*/
+#chaussure2{
+  background-image: url(./img/chaussure.png);
+  width:69px;
+  height:38px;
+  /*bottom:175px;
+  left:235px;*/
+  bottom: -123px;
+  left: 130px;
+  z-index: 2;
+  transform-origin: left;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
